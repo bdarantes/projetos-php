@@ -1,0 +1,18 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+
+# Dependências (se no futuro usar Composer)
+vendor/
+
+# Configurações sensíveis (para o futuro)
+.env
