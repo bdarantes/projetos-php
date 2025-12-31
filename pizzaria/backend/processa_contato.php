@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: ../contato.php');
     exit;
@@ -29,18 +31,18 @@ if (empty($assunto) || !in_array($assunto, $assuntosValidos)) {
     $erros[] = 'A mensagem deve ter no mínimo 10 caracteres.';
 }
 
-if (!empty($erros)) {
-    echo '<h2>Erro no envio do formulário</h2>';
-    echo '<ul>';
-    foreach ($errors as $erro) {
-        echo "<li>{$erro}</li>";
-    }
+if(!empty($erros)) {
+    $_SESSION['erros'] = $erros;
+    $_SESSION['old'] = [
+        'nome' => $nome,
+        'email' => $email,
+        'assunto' => $assunto,
+        'mensagem' => $mensagem
+    ];
 
-    echo '</ul>';
-    echo '<a href="../contato.php">Voltar</a>';
+    header('Location: ../contato.php');
     exit;
 }
 
-echo '<h2>Mensagem enviada com sucesso!</h2>';
-echo '<p>Obrigado pelo contato, em breve responderemos.</p>';
-echo '<a href="../index.php">Voltar para a página inicial</a>';
+$_SESSION['sucesso']= 'Mensagem enviada com sucesso! Em breve entraremos em contato.';
+header('Location: ../contato.php');

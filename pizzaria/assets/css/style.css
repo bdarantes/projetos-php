@@ -103,3 +103,55 @@ section {
     text-align: center;
     padding: 20px 0;
 }
+
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #b22222;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #8b1a1a;
+}
+
+.erros {
+    background: #ffe6e6;
+    color: #a00;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.sucesso {
+    background: #e6ffea;
+    color: #0a662e;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
