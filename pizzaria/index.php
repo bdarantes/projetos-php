@@ -23,21 +23,21 @@
 
         <div class="pizzas">
             <article class="pizza">
-                <img src="" alt="Pizza de mussarela">
+                <img src="assets/img/pizzas/pizzamussarela.jpg" alt="Pizza de mussarela">
                 <h4>Mussarela</h4>
                 <p>Clássica, com queijo derretido e molho artesanal.</p>
             </article>
 
             <article class="pizza">
-                <img src="" alt="Pizza de Calabresa">
+                <img src="assets/img/pizzas/pizzacalabresa.jpg" alt="Pizza de Calabresa">
                 <h4>Calabresa</h4>
                 <p>Calabresa selecionada, cebola e muito sabor.</p>
             </article>
 
             <article class="pizza">
-                <img src="" alt="Pizza de Margherita">
-                <h4>Margherita</h4>
-                <p>Molho, mussarela, tomate e manjericão fresco.</p>
+                <img src="assets/img/pizzas/pizzapeperoni.jpg" alt="Pizza de Peperoni">
+                <h4>Peperoni</h4>
+                <p>Peperoni e molho especial.</p>
             </article>
         </div>
     </section>
