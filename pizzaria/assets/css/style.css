@@ -51,7 +51,7 @@ body {
 
 .hero {
     text-align: center;
-    padding: 60px 20px;
+
 }
 
 .hero h2 {
@@ -60,7 +60,7 @@ body {
 }
 
 section {
-    margin: 60px 0;
+    margin-bottom: 70px;
 }
 
 .pizzas {
@@ -75,6 +75,12 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pizza:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .pizza img {
@@ -90,11 +96,20 @@ section {
     background-color: #b22222;
     color: #fff;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
     background-color: #8b1a1a;
+}
+
+.btn:active {
+    transform: scale(0.98);
 }
 
 .footer {
@@ -105,14 +120,30 @@ section {
 }
 
 form {
-    background: #fff;
+    background: #fff; 
     padding: 30px;
     border-radius: 8px;
     margin-top: 20px;
 }
 
-.campo {
+p {
     margin-bottom: 15px;
+    color: #444;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+h2 {
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.campo {
+    margin-bottom: 20px;
 }
 
 .label {
@@ -123,9 +154,20 @@ form {
 
 input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+
+    font-size: 1rem;
+    font-family: inherit;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #b22222;
+    box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.2);
 }
 
 button {
@@ -142,16 +184,62 @@ button:hover {
 
 .erros {
     background: #ffe6e6;
-    color: #a00;
-    padding: 15px;
-    border-radius: 4px;
+    color: #8b0000;
+    padding: 15px 20px;
+    border-radius: 6px;
     margin-bottom: 20px;
+    border-left: 5px solid #b22222;
+
+    font-size: 0.95rem;
 }
 
 .sucesso {
     background: #e6ffea;
     color: #0a662e;
-    padding: 15px;
+    padding: 15px 20px;
     border-radius: 4px;
     margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #2e8b57;
+
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .lista-pizzas {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        padding: 20px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        font-size: 1rem;
+    }
 }

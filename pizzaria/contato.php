@@ -57,7 +57,7 @@ include 'includes/header.php';
             <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem..."required><?= $_SESSION['old']['mensagem'] ?? '' ?></textarea>
         </div>
 
-        <button type="submit" class="btn">Enviar Mensagem</button>
+        <button type="submit" class="">Enviar Mensagem</button>
     </form>
     <?php 
     unset($_SESSION['erros']);

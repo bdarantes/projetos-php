@@ -16,3 +16,8 @@ vendor/
 
 # Configurações sensíveis (para o futuro)
 .env
+
+#diretórios e arquivos sensíveis
+/config/database.php
+/config/email.php
+/logs/
